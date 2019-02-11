@@ -2,4 +2,5 @@
 dbbbot
 """
 
-import env_check
+# perform environment checks
+import .env_check
