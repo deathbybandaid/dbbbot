@@ -3,4 +3,4 @@ dbbbot
 """
 
 # perform environment checks
-import .env_check
+from .env_check import env_check
