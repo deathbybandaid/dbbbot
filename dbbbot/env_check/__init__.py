@@ -10,5 +10,3 @@ if versionsuccess["errormessage"]:
     print (versionsuccess["errormessage"])
 if versionsuccess["error"]:
     sys.exit(1)
-else:
-    print ("not exitting")
