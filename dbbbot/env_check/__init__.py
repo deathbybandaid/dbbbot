@@ -3,7 +3,7 @@ dbbbot
 """
 
 # Common functions
-import dbbbot.common
+from dbbbot.common import *
 
 import sys
 
