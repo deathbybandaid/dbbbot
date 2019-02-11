@@ -13,3 +13,5 @@ def dependencies:
     if sys.version_info != (3, 5):
         print ('Error: Testing for dbbbot has only been done on python version 3.5')
         return errordict
+    else:
+        print ('Success: Python version is good')
