@@ -11,7 +11,6 @@ def sys_locale_check():
     supportedlocale = 'UTF-8'
 
     loc = locale.getlocale()
-    print (loc)
 
     errordict = {"error": False, "errormessage": None}
 
