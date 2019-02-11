@@ -16,3 +16,7 @@ if versionsuccess["errormessage"]:
         dprint(versionsuccess["errormessage"], color='GREEN')
 if versionsuccess["error"]:
     sys.exit(1)
+
+
+from .sys_locale_check import sys_locale_check
+versionsuccess = sys_locale_check()
