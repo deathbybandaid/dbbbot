@@ -1,7 +1,7 @@
 """
 dbbbot
 """
-from Mammals import Mammals
+from .Mammals import Mammals
 # import sys
 
 # from dependencies import dependencies
