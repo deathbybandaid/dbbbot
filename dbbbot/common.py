@@ -32,6 +32,16 @@ def dprint(textarray=[], indent=0, color='BOLD'):
         print (indentstr + coloreval + entry + endcolor)
 
 
+def dprint_error_color(color_input):
+    if color_input:
+        if color_input == "WARN":
+            return "YELLOW"
+        else:
+            return "RED"
+    else:
+        return "GREEN"
+
+
 """
 Classes
 """
