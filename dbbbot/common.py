@@ -29,7 +29,7 @@ def dprint(textarray=[], indent=0, color='BOLD'):
             if not isinstance(indent, int):
                 indent = 1
             indentstr = "     " * indent
-        print (indentstr + coloreval + entry + endcolor)
+        print (indentstr + coloreval + entry + endcolor, file=sys.stderr)
 
 
 def dprint_error_color(color_input):
