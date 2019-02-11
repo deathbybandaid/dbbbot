@@ -14,6 +14,6 @@ def dependencies():
 
     # Check Python version is the supported version
     if sys.version_info[0] != python_version_major or sys.version_info[1] != python_version_minor:
-        print 'Error: Testing for dbbbot has only been done on python version ' + str(python_version_major) + "." + str(python_version_minor)
+        print ('Error: dbbbot only functions on ' + str(python_version_major) + "." + str(python_version_minor))
     else:
-        print 'Success: Python version is ' + str(sys.version_info[0]) + "." + str(sys.version_info[1])
+        print ('Success: Python version is ' + str(sys.version_info[0]) + "." + str(sys.version_info[1]))
