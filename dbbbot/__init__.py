@@ -3,6 +3,6 @@ dbbbot
 """
 import sys
 
-from Dependencies import dependencies
+from dependencies import dependencies
 if not dependencies():
     sys.exit(1)
