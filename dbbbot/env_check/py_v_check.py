@@ -7,8 +7,7 @@ import sys
 def py_v_check():
 
     # Supported Python Version
-    python_version_major = 3
-    python_version_minor = 5
+    python_version_major, python_version_minor = 3, 5
 
     errordict = {"error": False, "errormessage": None}
 
@@ -18,4 +17,5 @@ def py_v_check():
         errordict["error"] = True
     else:
         errordict["errormessage"] = ('Success: Python version is ' + str(sys.version_info[0]) + "." + str(sys.version_info[1]))
+
     return errordict
