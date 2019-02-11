@@ -2,7 +2,7 @@
 dbbbot
 """
 from Mammals import Mammals
-import sys
+# import sys
 
 # from dependencies import dependencies
 # if not dependencies():
