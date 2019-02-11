@@ -2,6 +2,9 @@
 dbbbot
 """
 
+# Common functions
+import dbbbot.common
+
 import sys
 
 from .py_v_check import py_v_check
