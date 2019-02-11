@@ -4,7 +4,7 @@ Verify all dependencies are met
 import sys
 
 
-def dependencies:
+def dependencies():
 
     errordict = dict()
 
