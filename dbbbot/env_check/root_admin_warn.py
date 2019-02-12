@@ -14,20 +14,23 @@ def root_admin_warn():
     errordict = {"error": False, "errormessage": None}
 
     # Detect operating system
-    opersystem = platform.system()
+    corememory["env"]["opersystem"] = platform.system()
 
     # Linux: Linux
     # Mac: Darwin
     # Windows: Windows
+    corememory["env"]["rootuser"] = False
 
-    if opersystem in ["Linux", "Darwin"]:
+    if corememory["env"]["opersystem"] in ["Linux", "Darwin"]:
         if os.getuid() == 0 or os.geteuid() == 0:
+            corememory["env"]["rootuser"] = True
             errordict["errormessage"] = ("Warning: dbbbot should not be run on root")
             errordict["error"] = "WARN"
         else:
             errordict["errormessage"] = ("Succese: dbbbot is not run on root")
-    elif opersystem in ["Windows"]:
+    elif corememory["env"]["opersystem"] in ["Windows"]:
         if os.environ.get("USERNAME") == "Administrator":
+            corememory["env"]["rootuser"] = True
             errordict["errormessage"] = ("Warning: dbbbot should not be run on administrator")
             errordict["error"] = "WARN"
         else:

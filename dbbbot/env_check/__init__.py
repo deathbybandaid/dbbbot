@@ -10,6 +10,7 @@ import sys
 dprint_divider(color='BLUE')
 
 dprint(["Performing Environment Checks", ""])
+corememory["env"] = dict()
 
 dprint("Checking Python Version")
 from .py_v_check import py_v_check
