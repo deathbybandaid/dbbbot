@@ -32,6 +32,7 @@ if argv != []:
 
     if opts.version:
         dprint("beta testing")
+        sys.exit(1)
 
 else:
     dprint("Not arguments passed, continuing.", color="GREEN")
