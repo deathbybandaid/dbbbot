@@ -26,6 +26,19 @@ dprint(["Checking For CLI Arguments", ""])
 parser = build_parser()
 opts = parser.parse_args(sys.argv[1:] or None)
 if opts.version:
-    print (dir(opts))
+    dprint(class_directory(opts))
 
 dprint("")
+
+
+def class_directory(inputclass):
+
+    # make sure input is a class
+    if not isinstance(inputclass, class):
+        return []
+
+    classdirlistfull, classdirlistclean = dir(inputclass), []
+    for classdiritem in classdirlistfull:
+        if not classdiritem.startswith("_"):
+            classdirlistclean.append(classdiritem)
+    return classdirlistclean
