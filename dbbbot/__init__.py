@@ -6,6 +6,7 @@ dbbbot
 from dbbbot.common import *
 
 print (corememory)
+corememory["test"] = 5
 
 # perform environment checks
 import dbbbot.env_check
