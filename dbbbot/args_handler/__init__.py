@@ -18,6 +18,8 @@ def build_parser():
 
     parser.add_argument('-f', '--fart', action="store_true", dest="fart", help="makes the bot fart")
 
+    print ("here")
+
     return parser
 
 
@@ -28,8 +30,8 @@ dprint(["Checking For CLI Arguments", ""])
 parser = build_parser()
 opts = parser.parse_args(sys.argv[1:] or None)
 
-# if opts.version:
-#    dprint("beta testing")
+if opts.version:
+    dprint("beta testing")
 
 if opts.fart:
     dprint("farting now!")
