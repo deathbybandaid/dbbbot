@@ -28,8 +28,8 @@ dprint(["Checking For CLI Arguments", ""])
 parser = build_parser()
 opts = parser.parse_args(sys.argv[1:] or None)
 
-if opts.version:
-    dprint("beta testing")
+# if opts.version:
+#    dprint("beta testing")
 
 if opts.fart:
     dprint("farting now!")
