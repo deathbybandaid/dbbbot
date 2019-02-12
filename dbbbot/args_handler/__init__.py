@@ -26,12 +26,12 @@ dprint_divider(color='BLUE')
 dprint(["Checking For CLI Arguments", ""])
 
 parser = build_parser()
-argv = sys.argv[1:]
+argv = sys.argv[1:] or []
 
 if argv != []:
 
     print (parser)
-    opts = parser.parse_args(sys.argv[1:] or None)
+    opts = parser.parse_args(argv)
 
     if opts.version:
         dprint("beta testing")
