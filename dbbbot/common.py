@@ -36,6 +36,9 @@ class corememoryclass(dict):
         return self.__contains__(key)
 
 
+corememory = corememoryclass()
+
+
 """
 Display Functions
 """
