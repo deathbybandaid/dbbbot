@@ -5,7 +5,7 @@ Memory
 """
 
 
-class corememory(dict=dict()):
+class corememoryclass(dict):
 
     """A simple thread-safe dict implementation.
     In order to prevent exceptions when iterating over the values and changing
