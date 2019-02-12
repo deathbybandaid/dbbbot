@@ -16,6 +16,8 @@ def build_parser():
 
     parser.add_argument('-v', '--version', action="store_true", dest="version", help="Show version number and exit")
 
+    parser.add_argument('-f', '--fart', action="store_true", dest="fart", help="makes the bot fart")
+
     return parser
 
 
@@ -27,5 +29,8 @@ parser = build_parser()
 opts = parser.parse_args(sys.argv[1:] or None)
 if opts.version:
     dprint(class_directory(opts))
+
+if opts.fart:
+    dprint("farting now!")
 
 dprint("")
