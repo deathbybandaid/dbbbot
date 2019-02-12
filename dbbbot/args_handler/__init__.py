@@ -25,6 +25,7 @@ dprint(["Checking For CLI Arguments", ""])
 
 parser = build_parser()
 opts = parser.parse_args(sys.argv[1:] or None)
-print (opts)
+if opts.version:
+    print (opts)
 
 dprint("")
