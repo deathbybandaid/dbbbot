@@ -1,6 +1,41 @@
 import sys
 
 """
+Memory
+"""
+
+
+class corememory(dict):
+
+    """A simple thread-safe dict implementation.
+    In order to prevent exceptions when iterating over the values and changing
+    them at the same time from different threads, we use a blocking lock on
+    ``__setitem__`` and ``contains``.
+    """
+    def __init__(self, *args):
+        dict.__init__(self, *args)
+        self.lock = threading.Lock()
+
+    def __setitem__(self, key, value):
+        self.lock.acquire()
+        result = dict.__setitem__(self, key, value)
+        self.lock.release()
+        return result
+
+    def __contains__(self, key):
+        """Check if a key is in the dict.
+        It locks it for writes when doing so.
+        """
+        self.lock.acquire()
+        result = dict.__contains__(self, key)
+        self.lock.release()
+        return result
+
+    def contains(self, key):
+        return self.__contains__(key)
+
+
+"""
 Display Functions
 """
 
@@ -44,6 +79,16 @@ def dprint_error_color(color_input):
         return "GREEN"
 
 
+class bcolors:
+    PURPLE = '\033[95m'
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+
+
 """
 Classes
 """
@@ -68,22 +113,8 @@ def class_create(classname):
 
 def class_directory(inputclass):
 
-    # make sure input is a class
-    # if not isinstance(inputclass, class):
-        # return []
-
     classdirlistfull, classdirlistclean = dir(inputclass), []
     for classdiritem in classdirlistfull:
         if not classdiritem.startswith("_"):
             classdirlistclean.append(classdiritem)
     return classdirlistclean
-
-
-class bcolors:
-    PURPLE = '\033[95m'
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'

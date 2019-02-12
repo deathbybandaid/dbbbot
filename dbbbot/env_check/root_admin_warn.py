@@ -1,6 +1,10 @@
 """
 Check user running
 """
+
+# Common functions
+from dbbbot.common import *
+
 import sys
 import os
 import platform

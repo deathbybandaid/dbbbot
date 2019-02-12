@@ -1,6 +1,10 @@
 """
 Verify correct system locale
 """
+
+# Common functions
+from dbbbot.common import *
+
 import sys
 import locale
 

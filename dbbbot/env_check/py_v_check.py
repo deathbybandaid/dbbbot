@@ -1,6 +1,10 @@
 """
 Verify correct python version
 """
+
+# Common functions
+from dbbbot.common import *
+
 import sys
 
 
