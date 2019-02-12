@@ -31,7 +31,7 @@ if argv != []:
     opts = parser.parse_args(argv)
 
     if opts.version:
-        dprint("beta testing")
+        dprint("alpha testing")
         sys.exit(1)
 
 else:
