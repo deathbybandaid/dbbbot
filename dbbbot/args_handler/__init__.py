@@ -16,8 +16,6 @@ def build_parser():
 
     parser.add_argument('-v', '--version', action="store_true", dest="version", help="Show version number and exit")
 
-    parser.add_argument('-f', '--fart', action="store_true", dest="fart", help="makes the bot fart")
-
     return parser
 
 
@@ -36,7 +34,7 @@ if argv != []:
     if opts.version:
         dprint("beta testing")
 
-    if opts.fart:
-        dprint("farting now!")
+else:
+    dprint("Not arguments passed, continuing.", color="GREEN")
 
 dprint("")
