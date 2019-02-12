@@ -30,7 +30,7 @@ argv = sys.argv[1:]
 
 if argv != []:
 
-    print (argv)
+    print (parser)
     opts = parser.parse_args(sys.argv[1:] or None)
 
     if opts.version:
