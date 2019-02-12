@@ -7,7 +7,7 @@ Display Functions
 
 def dprint_divider(color='BOLD'):
 
-    dprint(textarray=["___________________________________________________________"], color='BOLD')
+    dprint(textarray=["___________________________________________________________"], color=color)
 
 
 def dprint(textarray=[], indent=0, color='BOLD'):
