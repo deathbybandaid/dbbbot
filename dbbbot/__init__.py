@@ -9,6 +9,10 @@ corememory = corememoryclass()
 
 print (corememory)
 
+corememory["test"] = 5
+
+print (corememory)
+
 # perform environment checks
 import dbbbot.env_check
 
