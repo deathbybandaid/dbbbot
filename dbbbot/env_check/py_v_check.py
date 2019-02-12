@@ -18,7 +18,7 @@ def py_v_check():
     errordict = {"error": False, "errormessage": None}
 
     # Check Python version is the supported version
-    if python_version_major_act != python_version_major_sup or python_version_minor_act != python_version_minor_sup:
+    if python_version_major_act != python_version_major_sup or python_version_minor_act >= python_version_minor_sup:
         errordict["errormessage"] = ('Error: dbbbot only functions on ' + str(python_version_major_sup) + "." + str(python_version_minor_sup) + " Your version is " + corememory["env"]["python"])
         errordict["error"] = True
     else:
