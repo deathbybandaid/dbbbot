@@ -6,7 +6,6 @@ dbbbot
 from dbbbot.common import *
 
 print (corememory)
-corememory = dict()
 
 # perform environment checks
 import dbbbot.env_check
