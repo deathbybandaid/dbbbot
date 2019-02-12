@@ -7,6 +7,8 @@ from dbbbot.common import *
 
 import sys
 
+dprint_divider(color='BLUE')
+
 from .py_v_check import py_v_check
 versionsuccess = py_v_check()
 if versionsuccess["errormessage"]:
