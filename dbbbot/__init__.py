@@ -8,4 +8,5 @@ from dbbbot.common import *
 # perform environment checks
 import dbbbot.env_check
 
-print (True)
+# Check for, and handle CLI arguments
+import dbbbot.args_handler
