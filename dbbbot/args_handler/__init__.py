@@ -18,8 +18,6 @@ def build_parser():
 
     parser.add_argument('-f', '--fart', action="store_true", dest="fart", help="makes the bot fart")
 
-    print ("here")
-
     return parser
 
 
@@ -28,6 +26,7 @@ dprint_divider(color='BLUE')
 dprint(["Checking For CLI Arguments", ""])
 
 parser = build_parser()
+print (parser)
 opts = parser.parse_args(sys.argv[1:] or None)
 
 if opts.version:
