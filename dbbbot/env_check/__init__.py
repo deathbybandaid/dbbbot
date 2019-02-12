@@ -28,3 +28,13 @@ if localesuccess["errormessage"]:
 if localesuccess["error"] and localesuccess["error"] != "WARN":
     sys.exit(1)
 dprint("")
+
+
+dprint("Checking Current User")
+from .root_admin_warn import root_admin_warn
+adminsuccess = root_admin_warn()
+if adminsuccess["errormessage"]:
+    dprint(adminsuccess["errormessage"], color=dprint_error_color(adminsuccess["error"]))
+if adminsuccess["error"] and adminsuccess["error"] != "WARN":
+    sys.exit(1)
+dprint("")
