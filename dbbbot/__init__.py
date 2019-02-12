@@ -5,6 +5,8 @@ dbbbot
 # Common functions
 from dbbbot.common import *
 
+print (corememory)
+
 # perform environment checks
 import dbbbot.env_check
 
