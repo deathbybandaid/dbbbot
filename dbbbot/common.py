@@ -66,6 +66,19 @@ def class_create(classname):
     return newclass
 
 
+def class_directory(inputclass):
+
+    # make sure input is a class
+    # if not isinstance(inputclass, class):
+        # return []
+
+    classdirlistfull, classdirlistclean = dir(inputclass), []
+    for classdiritem in classdirlistfull:
+        if not classdiritem.startswith("_"):
+            classdirlistclean.append(classdiritem)
+    return classdirlistclean
+
+
 class bcolors:
     PURPLE = '\033[95m'
     BLUE = '\033[94m'

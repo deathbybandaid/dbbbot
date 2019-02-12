@@ -29,16 +29,3 @@ if opts.version:
     dprint(class_directory(opts))
 
 dprint("")
-
-
-def class_directory(inputclass):
-
-    # make sure input is a class
-    # if not isinstance(inputclass, class):
-        # return []
-
-    classdirlistfull, classdirlistclean = dir(inputclass), []
-    for classdiritem in classdirlistfull:
-        if not classdiritem.startswith("_"):
-            classdirlistclean.append(classdiritem)
-    return classdirlistclean
