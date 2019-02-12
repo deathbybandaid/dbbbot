@@ -6,7 +6,7 @@ dbbbot
 from dbbbot.common import *
 
 import sys
-import getopt
+import argparse
 
 
 def build_parser():
